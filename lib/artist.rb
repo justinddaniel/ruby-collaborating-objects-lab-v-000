@@ -24,11 +24,19 @@ class Artist
   end
 
   def self.find_or_create_by_name(artist_name)
-    if @@all.name.detect(artist_name) == nil
-      Artist.new(artist_name)
-    else
-      @@all.name.detect(artist_name)
+    findx = nil
+    @@all.each do |a| 
+      if a.include?(artist_name) == true
+        findx = a 
+      end
     end
+    if findx = nil
+      Artist.new(artist_name)
+    else 
+      findx
+    end
+  end
+      
   end
 
 end
