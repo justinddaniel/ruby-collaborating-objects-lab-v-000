@@ -7,5 +7,5 @@ class MP3Importer
     @files = []
   end
 
-  def files
+end
     
