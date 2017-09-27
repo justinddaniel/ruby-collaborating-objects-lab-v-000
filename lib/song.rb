@@ -7,5 +7,3 @@ class Song
   end
 
 end
-
-    
