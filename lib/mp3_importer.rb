@@ -8,5 +8,11 @@ class MP3Importer
     @files = Dir.entries(path).select{ |f| !File.directory? f}
   end
 
+  def import
+    @files.each do |f|
+      Song.new_by_filename
+    end
+  end
+
 
 end
