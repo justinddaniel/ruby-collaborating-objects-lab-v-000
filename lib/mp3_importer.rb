@@ -4,7 +4,8 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    @files = []
+    @files = Dir.glob('path/**/*').select{ |e| File.file? e }
   end
+
 
 end
