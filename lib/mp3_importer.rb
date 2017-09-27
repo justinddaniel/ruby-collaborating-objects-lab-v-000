@@ -1,3 +1,4 @@
+require 'pry'
 class MP3Importer
 
   attr_accessor :path, :files
@@ -5,7 +6,7 @@ class MP3Importer
   def initialize(path)
     @path = path
     @files = Dir.glob(path).select{ |e| File.file? e }
-    binding.pry 
+    binding.pry
   end
 
 
