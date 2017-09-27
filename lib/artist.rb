@@ -25,18 +25,18 @@ class Artist
 
   def self.find_or_create_by_name(artist_name)
     findx = nil
-    @@all.each do |a| 
+    @@all.each do |a|
       if a.include?(artist_name) == true
-        findx = a 
+        findx = a
       end
     end
-    if findx = nil
+    if findx == nil
       Artist.new(artist_name)
-    else 
+    else
       findx
     end
   end
-      
+
   end
 
 end
