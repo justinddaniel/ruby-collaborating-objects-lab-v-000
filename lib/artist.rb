@@ -38,7 +38,9 @@ class Artist
   end
 
   def print_songs
-    @songs.each {|s| puts "#{s}"}
+    song_names = []
+    @songs.each {|s| song_names << s.name}
+    song_names.each {|sn| puts "#{sn}"}
   end
 
 end
