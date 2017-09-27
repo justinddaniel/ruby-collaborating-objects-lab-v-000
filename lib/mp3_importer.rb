@@ -5,8 +5,7 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    @files = Dir.glob(path).select{ |e| File.file? e }
-    binding.pry
+    @files = Dir.entries(path).select{ |f| !File.directory? f}
   end
 
 
