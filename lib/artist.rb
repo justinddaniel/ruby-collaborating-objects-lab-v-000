@@ -26,7 +26,7 @@ class Artist
   def self.find_or_create_by_name(artist_name)
     findx = nil
     @@all.each do |a|
-      if a.include?(artist_name) == true
+      if a.name == artist_name
         findx = a
       end
     end
